@@ -1,15 +1,16 @@
 import { useState } from "react";
-import {Container} from "react-bootstrap";
+import { Container } from "react-bootstrap";
+import ChartsComponent from "./ChartsComponent";
 import CityListComponent from "./CityListComponent";
 
-function BodyComponent () {
+function BodyComponent() {
 
-const [selectedCity, setSelectedCity] = useState('Tallinn');
+    const [selectedCity, setSelectedCity] = useState('Tallinn');
 
-    return(
+    return (
         <Container className="mt-4 ">
-            <CityListComponent setSelectedCity = {setSelectedCity} />
-            <h2>{selectedCity}</h2>
+            <CityListComponent setSelectedCity={setSelectedCity} />
+            <ChartsComponent />
         </Container>
     )
 }
